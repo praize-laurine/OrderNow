@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 {% block content%}
+{% load bootstrap4%}
+{% load static%}
 {{ block.super}}
-<div class="container mb-5" >
+<div class="container mb-5" style="background-image: url('https://www.nhflavors.com/wp-content/uploads/2018/02/romantic-dinner-BVI-740X474-696x446.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover; overflow-x: hidden;">
     <div class="row justify-content-center mt-5">
         <div class="col-md-8 col-sm-12 offset-md-1 p-4 text-center">
-            <h1>Online Food Delivery Service</h1>
+            <h1 style="font-size: 25px; font-weight: bold; font-family: 'Gabriela', serif;">Are You Hungry?</h1>
         </div>
     </div>
     <div class="row justify-content-center mt-1">
         <div class="card col-md-5 col-sm-12 offset-md-1 p-4 text-center">
             <h2>Place An Order</h2>
-            <button class="btn btn-outline-primary">Order Now</button>
+            <a href="{% url 'order' %}" class="btn btn-outline-primary" style="font-family: 'Satisfy', cursive;">Order Now!</a>
         </div>
     </div>
 </div>

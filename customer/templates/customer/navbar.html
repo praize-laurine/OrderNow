@@ -1,60 +1,20 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-dark indigo">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'index' %}">Deliver</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Place an order!</a>
-              </li>
-
-        </ul>
-      </div>
+<nav class="navbar navbar-inverse" style="background-color: blue;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'index' %}" style="color: black; font-family: 'Satisfy', cursive; font-size: 25px;">Goshen</a>
+      <a class="navbar-brand" href="{% url 'about' %}" style="color: black; font-family: 'Satisfy', cursive; font-size: 25px;">About</a>
     </div>
-  </nav>
-
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-  </head>
-  <body>
-      <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-              <div class="navbar-header">
-                  <a class="navbar-brand" href="{% url 'index' %}" style="font-family: 'Satisfy', cursive; font-size: 25px;"><b>Deliver</b></a>
-              </div>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Place an order!</a>
-              </li>
-
-        </ul>
-              </div>
-
+    <!-- Adding a search form  -->
+    <div class="col-sm-4 col-md-4 navbar-right">
+      <form class="navbar-form" role="search" action="">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Product" name="product">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
           </div>
-      </nav>
-      
-  </body>
-  </html> -->
+        </div>
+      </form>
+    </div>
+    <!-- search form end -->
+  </div>
+</nav

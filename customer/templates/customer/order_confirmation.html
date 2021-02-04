@@ -6,7 +6,7 @@
         <div class="col-md-5 col-sm-12 p-4 text-center">
             <h1>Order Submitted!</h1>
             <p>You should receive a confirmation email soon</p>
-            <a href="{% url 'index %'}">Go to the homepage</a>
+            <a href="{% url 'index' %}" >Go to the homepage</a>
         </div>
     </div>
 
@@ -14,10 +14,10 @@
         <div class="col-md-5 col-sm-12 text-center">
             <h3 class="pb-3">Order Summmary:</h3>
             {% for item in items %}
-              <p>{{item.name}} <span class="p1-3">{{item.price}}</span></p>
+              <p>{MenuItem.name}} <span class="p1-3">{{MenuItem.price}}</span></p>
             {% endfor %}
 
-            <p class="font-weight-bold-pt-4">Total: {{price}}}</p>
+            <p class="font-weight-bold-pt-4">Total: {{price}}</p>
         </div>
     </div>
 </div>

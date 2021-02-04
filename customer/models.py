@@ -27,8 +27,41 @@ class OrderModel(models.Model):
     city = models.CharField(max_length = 50, blank = True)
     state = models.CharField(max_length = 15, blank = True)
     zip_code = models.IntegerField(blank = True, null = True)
+    is_paid = models.BooleanField(default = False)
     def __str__(self):
         return f'Order:{self.created_on.strftime("%b %d %I: %M %p")}'
+
+class Image(models.Model):
+    name = models.CharField(max_length =60)
+    description = models.CharField(max_length =200)
+    Images_image = models.ImageField(upload_to = 'images/')
+
+    
+
+    
+    def save_image(self):
+        self.save()
+    
+    def delete_image(self):
+        self.dele
+        
+    @classmethod
+    def update_image(cls, id, value):
+        cls.objects.filter(id=id).update(image=value)
+    
+    @classmethod
+    def get_image_by_id(cls, id):
+        image = cls.objects.filter(id=id).all()
+        return image 
+     
+     
+   
+     
+     
+    
+  
+    def __str__(self):
+        return self.name        
 
 
 

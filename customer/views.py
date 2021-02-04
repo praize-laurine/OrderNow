@@ -88,4 +88,46 @@ def post(request):
                 'price': price
             }
 
+            # return redirect('OrderConfirmtion', pk = order.pk)
+            
+
+
     return render(request, 'customer/order_confirmation.html', context)
+
+# def OrderConfirmtion(request):
+#     order = OrderModel.objects.get(pk = pk)
+
+#     context = {
+#         'pk': order.pk,
+#         'items': order.items,
+#         'price': order.price,
+#     }
+
+#     return render(request, 'customer/order_confirmation.html', context)
+
+# def post(request, pk):  
+#     print(request.body)  
+
+# def OrderPayConfirmtion(request):
+#     return render(request, 'customer/order_pay_confirmation.html')
+
+def menu(request):
+    '''
+    Method to return all images, locations, categories
+    '''
+    images = Image.objects.all()
+    # location = Location.objects.all()
+    # categories = Category.get_all_categories()
+    context = {
+        "images":images,
+        # "location":location,
+        # "categorie": categories,
+    }
+    
+    return render(request, 'customer/menu.html', context)
+
+
+
+
+
+        
